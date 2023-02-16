@@ -49,7 +49,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
   // console.log(movies);
   return (
     <div className="row">
-      <h1>{title}</h1>
+      <h3>{title}</h3>
       <div className="row__poster">
         {movies.map((movie) => (
           <img
@@ -62,11 +62,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
-      {/* {movies.map((movie) => (
-        <div onMouseOver={() => handleMouseover(movie)} />
-      ))} */}
 
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "20px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
     </div>

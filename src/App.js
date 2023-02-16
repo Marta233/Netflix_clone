@@ -17,10 +17,10 @@ function App() {
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Rated Movies" fetchUrl={requests.feachTopRatedMovies} />
       <Row title="Action Movies" fetchUrl={requests.feachActionMovies} />
-      <Row title="Action Movies" fetchUrl={requests.feachComedyMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.feachHorrorMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.feachRomanceMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.feachDocumentaries} />
+      <Row title="Comedy Movies" fetchUrl={requests.feachComedyMovies} />
+      <Row title="Horror Movies" fetchUrl={requests.feachHorrorMovies} />
+      <Row title="Romance Movies" fetchUrl={requests.feachRomanceMovies} />
+      <Row title="Documentaries" fetchUrl={requests.feachDocumentaries} />
     </div>
   );
 }

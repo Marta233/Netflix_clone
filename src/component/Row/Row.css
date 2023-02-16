@@ -10,7 +10,8 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 5px;
     width: 100%;
 }
 
