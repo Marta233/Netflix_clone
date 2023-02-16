@@ -2,6 +2,8 @@
     color: white;
     object-fit: contain;
     height: 448px;
+    width: 100%;
+    /* margin-bottom: -110px; */
 }
 
 .banner__contant {
@@ -46,14 +48,14 @@
     transition: all 0.2s;
 }
 
-.banner__fed {
-    height: 7.4rem;
-    /* background: linear-gradient(380deg,
+.banner-fed {
+height: 7.4rem;
+    background-image: linear-gradient(180deg,
             transparent,
-            rgba(138, 133, 133, 0.61) #111); */
-            background: linear-gradient(150deg, transparent, rgba(10, 9, 9, 0.61), #111);
+            rgb(37, 37, 37, 0.61),
+            #111);
 }
-
+ 
 
 /* // banner linear-gradient not work 
 // nav some place black */

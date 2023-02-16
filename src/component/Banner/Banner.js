@@ -40,8 +40,8 @@ function Banner() {
           <button className="banner__button">My List</button>
         </div>
         <h1 className="banner__description">{trancate(movie.overview, 150)}</h1>
+        <div className="banner-fed" />
       </div>
-      <div className="banner__fed" />
     </header>
   );
 }

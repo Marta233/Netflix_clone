@@ -8,6 +8,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [titlename, settitlename] = useState("");
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl); // baseURLfromaxios + featchUrlFromapp.js(from requast)
@@ -26,6 +27,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     },
   };
   const handleClick = (movie) => {
+    handleMouseover(movie);
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
@@ -37,11 +39,17 @@ function Row({ title, fetchUrl, isLargeRow }) {
         .catch((error) => console.log(error));
     }
   };
+
+  const handleMouseover = (movie) => {
+    //  titlename(movie.title || movie.name || movie.original_name)
+
+    settitlename(movie.title || movie.name || movie.original_name);
+  };
+
   // console.log(movies);
   return (
     <div className="row">
       <h1>{title}</h1>
-      <h2>my namee is</h2>
       <div className="row__poster">
         {movies.map((movie) => (
           <img
@@ -54,6 +62,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
+      {/* {movies.map((movie) => (
+        <div onMouseOver={() => handleMouseover(movie)} />
+      ))} */}
+
       <div style={{ padding: "40px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
